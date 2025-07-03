@@ -1,0 +1,17 @@
+# Habilitar el motor de reescritura
+RewriteEngine On
+
+# Definir la base de la reescritura. Asegúrate de que esto coincida con la ruta de tu aplicación.
+RewriteBase /
+
+# Regla para manejar el enrutamiento de la SPA
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Configure el paquete “ea-php82” como el lenguaje de programación predeterminado “PHP”.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php82___lsphp .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

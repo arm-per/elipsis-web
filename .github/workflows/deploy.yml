@@ -1,0 +1,32 @@
+name: Deploy Vite App to HostGator via FTP
+
+on:
+  push:
+    branches:
+      - main  # o la rama que uses
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Vite app
+        run: pnpm run build
+
+      - name: Deploy to HostGator via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: dist
+          server-dir: public_html/  # Cambia si tu ruta de hosting es distinta
