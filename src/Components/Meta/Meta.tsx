@@ -11,7 +11,7 @@ const Meta = ({ title, description, image }: { title: string; description: strin
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={image} />
-        <meta property="og:url" content={`https://revistaelipsis.com.mx/${location}`} />
+        <meta property="og:url" content={`https://revistaelipsis.com.mx/${location.pathname}`} />
         <meta property="og:site_name" content="Elipsis Digital" />
         <meta property="og:locale" content="es_MX" />
     </Helmet>
