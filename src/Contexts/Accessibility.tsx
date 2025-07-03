@@ -1,4 +1,5 @@
 import { ReactElement, ReactNode, createContext } from 'react';
+
 import { useAccessibility, UseAccessibilityInterface } from '../Hooks/useAccessibility';
 
 export const AccessibilityContext = createContext<UseAccessibilityInterface>({} as UseAccessibilityInterface);

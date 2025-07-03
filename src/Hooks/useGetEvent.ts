@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+
 import { SOURCE_PATH } from '../constants/constants';
 
 const useGetEvent = () => {
@@ -20,7 +21,6 @@ const useGetEvent = () => {
             })
             .finally(()=>{
                 setIsLoading(false);
-                console.clear();
             })
     }, [])
 

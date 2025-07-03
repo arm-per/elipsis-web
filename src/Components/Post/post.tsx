@@ -1,7 +1,9 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
+
 import { Dictionary } from "../../Contexts/Dictionaries";
 import { AccessibilityContext } from "../../Contexts/Accessibility";
-import { Link } from "react-router-dom";
+
 import PostProps from "./Post.interface";
 import './post.css';
 

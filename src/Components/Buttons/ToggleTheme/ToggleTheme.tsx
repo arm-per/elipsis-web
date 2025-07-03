@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+
 import { SunIcon, MoonIcon } from "./Icons";
 import styles from './ToggleTheme.module.css'
 

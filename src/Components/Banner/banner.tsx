@@ -1,6 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { ReactElement, useEffect, useRef, useState } from "react";
+
 import { useGetBanners } from "../../Hooks/useGetBanners";
+
 import styles from './banner.module.css'
 
 const Banner = ():ReactElement => {
@@ -22,7 +24,6 @@ const Banner = ():ReactElement => {
         setTimeout(()=>{
             counterHandler(counter + 1)
         }, 4000)
-        console.log(counter)
     },[counter])
     
     return <article className={styles.bannerContainer}>

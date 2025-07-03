@@ -1,12 +1,14 @@
 import { ReactElement, useContext, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
+
 //import { Categories } from "../../Utils/Categories";
-import styles from './Header.module.css'
 import { AccessibilityContext } from "../../Contexts/Accessibility";
-import { MobileMenu } from "./MobileMenu";
 import { setLocations } from "../../Utils/createLink";
 import logo from '../../assets/logo.png';
 import logotexto from '../../assets/texto.svg';
+
+import { MobileMenu } from "./MobileMenu";
+import styles from './Header.module.css'
 
 const Header = ({announce}: {announce: boolean}): ReactElement => {
     const { fontSize } = useContext(AccessibilityContext)

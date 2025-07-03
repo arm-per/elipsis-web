@@ -1,6 +1,8 @@
 import { ReactElement, useContext} from "react";
-import styles from './Footer.module.css';
+
 import { AccessibilityContext } from "../../Contexts/Accessibility";
+
+import styles from './Footer.module.css';
 
 export const Footer = (): ReactElement => {
     const {readingMode} = useContext(AccessibilityContext)

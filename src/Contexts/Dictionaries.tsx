@@ -1,4 +1,5 @@
 import { ReactElement, ReactNode, createContext } from 'react';
+
 import { useGetCategories } from '../Hooks/useGetCategories';
 import { colors, ColorsInterface} from '../Utils/colors';
 

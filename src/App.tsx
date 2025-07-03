@@ -1,6 +1,7 @@
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+
 import { PreferencesIsland } from "./Components/PreferencesIsland/PreferencesIsland";
 import { Header } from "./Components/Header";
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { Homepage } from "./Pages/Homepage";
 import { Articles } from "./Pages/Articles";
 import { Article } from "./Pages/Article";

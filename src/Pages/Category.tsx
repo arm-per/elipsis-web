@@ -1,5 +1,6 @@
 import { ReactElement, useContext} from 'react';
 import {useParams, Outlet, Link} from 'react-router-dom';
+
 import { AccessibilityContext } from '../Contexts/Accessibility';
 import { Dictionary } from '../Contexts/Dictionaries';
 import { useGetCategory } from '../Hooks/useGetCategory';
@@ -20,7 +21,7 @@ const Category = (): ReactElement => {
             <section className="category-grid">
             {posts.map((el, index) => {
                     return <Link to={`${el.slug}`} className='cateogry-card' key={`${Categories[parseInt(parsedCategory! as unknown as string)].split(' ').join("-")}_${index}`}>
-                        <img aria-hidden="true" src={el['_embedded']['wp:featuredmedia'] ? (el['_embedded']['wp:featuredmedia'] as unknown as Array<{source_url: string}>)[0].source_url : undefined} style={{maxWidth: '300px', display: 'block'}}/>
+                        <img aria-hidden="true" alt={`${el.title.rendered} imagen`} src={el['_embedded']['wp:featuredmedia'] ? (el['_embedded']['wp:featuredmedia'] as unknown as Array<{source_url: string}>)[0].source_url : undefined} style={{maxWidth: '300px', display: 'block'}}/>
                         <h2>{el.title.rendered}</h2>
                         <span className='category-tag' style={{backgroundColor: Colors[el.categories[0]]}}>{Categories[el.categories[0]]}</span>
                     </Link>
