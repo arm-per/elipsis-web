@@ -1,0 +1,51 @@
+.iconContainer {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    gap: 10px;
+}
+
+.toggleButton {
+    width: 40px;
+    overflow: hidden;
+    padding: 10px;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.iconContainer svg{
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.bgLight{
+    background-color: #22aaff55;
+    transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1) .75s;
+}
+
+.bgLight:hover{
+    background-color: #22aaffff;
+}
+
+.bgDark:hover{
+    background-color: #09456aff;
+}
+
+.bgDark{
+    background-color: #09456a55;
+    transition: background-color cubic-bezier(0.075, 0.82, 0.165, 1) .75s;
+}
+
+.light{
+    transform: translateX(-30px);
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) .375s;
+}
+
+.dark{
+    transform: translateX(0);
+    transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) .375s;
+}

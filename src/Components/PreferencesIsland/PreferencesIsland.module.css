@@ -1,0 +1,47 @@
+.preferenceContainer{
+    background-color: #1a689899;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 90px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    gap: 10px;
+    position: fixed;
+    right: 10px;
+    top: calc(100dvh - 60px);
+    transition: width .225s;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.preferenceContainer.quickaccess{
+   width: 240px;
+   transition: width .225s;
+}
+
+.mobileButton{
+    display: block;
+}
+
+@media (min-width: 480px){
+    .mobileButton{
+        display: none;
+    }
+    .preferenceContainer{
+        flex-direction: column;
+        width: 50px;
+        top: calc(50dvh - 60px);
+        left: calc(100dvw - 60px);
+        height: auto;
+    }
+    .preferenceContainer > * {
+        flex: 1;
+    }
+    #access{
+        z-index: 999;
+        position: relative
+    }
+}

@@ -1,0 +1,108 @@
+.bannerContainer{
+    margin-block: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+}
+
+.bannerWrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    transform: translateX(-100%)
+}
+.bannerWrapper > *{
+    min-width: 100%;
+}
+
+.bannerBody a {
+    display: block;
+    width: max-content;
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.bannerBody p {
+    margin: 0;
+    max-width: 70ch;
+    width: 100%;
+    line-height: 140%;
+}
+
+
+.bannerBodyContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bannerBody {
+    background-color: red;
+    padding: 12px;
+    width: 100%;
+    max-width: 480px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.bannerBackground{
+    max-width: 1200px;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin-inline: auto;
+}
+
+@media (max-width: 480px){
+    .bannerContainer{
+        margin-bottom: 20px;
+        margin-top: 0;
+        width: 100%;
+        margin-inline: auto;
+        overflow: hidden;
+        position: relative;
+        border-radius: 0;
+    }
+    .bannerBackground{
+        max-width: 1200px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 0;
+        margin-inline: auto;
+    }
+
+    .bannerBodyContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+    .bannerBody {
+        background-color: red;
+        width: 100%;
+        padding: 12px;
+        background-color: white;
+        border-radius: 0;
+    }
+    .bannerBody p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}

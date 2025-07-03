@@ -1,0 +1,1 @@
+export const SOURCE_PATH = 'https://cms.revistaelipsis.com.mx';

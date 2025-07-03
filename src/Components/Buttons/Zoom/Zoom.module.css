@@ -1,0 +1,54 @@
+.zoomContainer{
+    display: flex;
+}
+.zoomContainer button{
+    display: block;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #09456a;
+    cursor: pointer;
+}
+
+.zoomContainer button:hover{
+    background-color: #042133;
+}
+.zoomContainer button:active{
+    background-color: #09456a;
+}
+
+.zoomContainer button:disabled{
+    background-color: #09456a;
+    opacity: .5;
+}
+
+.zoomContainer button:first-of-type{
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: none;
+}
+.zoomContainer button:last-of-type{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border: none;
+}
+
+@media (min-width: 480px){
+    .zoomContainer{
+        display: block;
+    }
+    .zoomContainer button:first-of-type{
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border: none;
+    }
+    
+    .zoomContainer button:last-of-type{
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border: none;
+    }
+}

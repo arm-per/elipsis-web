@@ -1,0 +1,10 @@
+.mainFooter{
+    background: #2A3950;
+}
+
+.mainFooter p{
+    margin:0;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}

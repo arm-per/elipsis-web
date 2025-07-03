@@ -1,0 +1,15 @@
+.QuickButton{
+    background-color: #09456a55;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+.QuickButton svg{
+    flex: 1
+}

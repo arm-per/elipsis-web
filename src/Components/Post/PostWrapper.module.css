@@ -1,0 +1,9 @@
+.postWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-bottom: 50px;
+}
