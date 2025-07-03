@@ -24,7 +24,7 @@ const Header = ({announce}: {announce: boolean}): ReactElement => {
             <div>
                 <div className={styles.mainHeaderLogoArea}>
                     <figure className="main-header-logo-wrapper">
-                        <Link to="/" className="main-header-logo"><img src={logo} alt="Logotipo de elipsis revista" width="60"/></Link>
+                        <Link to="/" className="main-header-logo"><img src={logo} alt="Logotipo de elipsis revista" width="80"/></Link>
                     </figure>
                     <figure>
                         <Link to="/" className="main-header-logo-texto"><img src={logotexto} alt="Revista Elipsis Digital"/></Link>
