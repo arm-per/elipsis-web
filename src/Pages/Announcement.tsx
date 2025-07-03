@@ -1,4 +1,5 @@
 import { ReactElement, useContext } from "react"
+
 import { AccessibilityContext } from "../Contexts/Accessibility";
 import { AnnounceInterface } from "../Hooks/useGetAnnounce";
 
@@ -8,7 +9,6 @@ interface DataInterface {
 }
 
 const Announcement = ({data, loading}: DataInterface): ReactElement => {
-    console.log(data)
 
     const {fontSize, readingMode} = useContext(AccessibilityContext);
     return (

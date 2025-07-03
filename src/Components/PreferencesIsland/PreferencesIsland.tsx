@@ -1,6 +1,8 @@
 import {useContext, useState, useEffect} from "react";
+
 import { AccessibilityContext } from "../../Contexts/Accessibility";
 import { ToggleTheme, Zoom, Reading, Quick } from "../Buttons";
+
 import styles from './PreferencesIsland.module.css'
 
 const PreferencesIsland = () => {

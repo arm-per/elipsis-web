@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
-import type { PostInfoInterface } from './useGetPost';
+
 import { SOURCE_PATH } from '../constants/constants';
+
+import type { PostInfoInterface } from './useGetPost';
 
 interface UseGetAllPostsInterface {
     isError: boolean;
@@ -19,7 +21,6 @@ const useGetAllPosts = (items: number, offset: number): UseGetAllPostsInterface 
         fetch(`${SOURCE_PATH}/wp-json/wp/v2/posts?_embed&offset=${offset}&per_page=${items}`)
             .then(response => {
                 setTotalPages(parseInt(response.headers.get('X-WP-TotalPages')?? '0'));
-                console.log(`${SOURCE_PATH}/wp-json/wp/v2/posts?_embed&offset=${offset}&per_page=${items}`)
                 return response.json()
             })
             .then(posts => setData(posts))

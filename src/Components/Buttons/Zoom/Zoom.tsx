@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+
 import { Magnify, Reduce } from "./icons";
 import styles from './Zoom.module.css'
 

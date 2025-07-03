@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
-import { PostInfoInterface } from './useGetPost';
+
 import { SOURCE_PATH } from '../constants/constants';
+
+import { PostInfoInterface } from './useGetPost';
 
 interface UseCategoriesInterface {
     isLoading: boolean;

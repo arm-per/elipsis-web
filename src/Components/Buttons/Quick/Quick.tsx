@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+
 import { Glasses, Quit } from "./icons";
 import styles from './Quick.module.css'
 

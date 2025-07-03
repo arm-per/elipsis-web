@@ -1,7 +1,9 @@
 import { ReactElement, useContext, useEffect, useState } from "react";
-import { AccessibilityContext } from "../Contexts/Accessibility";
 import {useParams} from 'react-router-dom';
+
+import { AccessibilityContext } from "../Contexts/Accessibility";
 import { useGetPost } from "../Hooks/useGetPost";
+import { Meta } from "../Components/Meta";
 //import { useGetAuthorInfo } from "../Hooks/useGetAuthorInfo";
 
 const Article = (): ReactElement => {
@@ -37,9 +39,15 @@ const Article = (): ReactElement => {
 
     return(
         <> 
+        
             {
                 !isLoading && !isError && 
                 <>
+                    <Meta
+                        title={postData?.title?.rendered || ''}
+                        description={postData?.excerpt?.rendered || ''}
+                        image={postData._embedded["wp:featuredmedia"] ? (postData._embedded["wp:featuredmedia"] as unknown as Array<{source_url: string}>)[0].source_url : ''}
+                    />
                     <div className='img-cover__background'><img src={postData._embedded["wp:featuredmedia"] ? (postData._embedded["wp:featuredmedia"] as unknown as Array<{source_url: string}>)[0].source_url : '' } alt="cover" className={`cover-image ${readingMode ? 'on-reading' : ''}`}/></div>
                     <div className={`article-meta-data size-${fontSize}`}><span className="author-info">{postData.acf.autor ?? ''}</span></div>
                     <h1 className={`h1-font-size-${fontSize} main-title`}>{postData?.title?.rendered}</h1>

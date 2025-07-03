@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+
 import { SOURCE_PATH } from '../constants/constants';
 
 export interface BannerInterface {
