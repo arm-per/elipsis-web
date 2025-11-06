@@ -24,7 +24,7 @@ const useGetCategories = (): UseCategoriesInterface => {
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
     useEffect(()=> {
-        fetch(`${SOURCE_PATH}/wp-json/wp/v2/categories`)
+        fetch(`${SOURCE_PATH}/wp-json/wp/v2/categories?per_page=20`)
         .then(response => response.json())
         .then(_categories_ => {
             let categoryDictionary = {};
@@ -43,6 +43,8 @@ const useGetCategories = (): UseCategoriesInterface => {
             setIsLoading(false);
         })
     }, [])
+
+    console.log({categories})
     
     return {categories, isError, isLoading}
 }

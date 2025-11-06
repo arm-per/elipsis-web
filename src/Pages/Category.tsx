@@ -19,7 +19,7 @@ const Category = (): ReactElement => {
         <main className="category_layout"> 
             <h1 className={`h1-font-size-${fontSize} category-title`}>{Categories[parseInt(parsedCategory! as unknown as string)]}</h1>
             <section className="category-grid">
-            {posts.map((el, index) => {
+            {!isLoading && posts.length > 0 && posts.map((el, index) => {
                     return <Link to={`${el.slug}`} className='cateogry-card' key={`${Categories[parseInt(parsedCategory! as unknown as string)].split(' ').join("-")}_${index}`}>
                         <img aria-hidden="true" alt={`${el.title.rendered} imagen`} src={el['_embedded']['wp:featuredmedia'] ? (el['_embedded']['wp:featuredmedia'] as unknown as Array<{source_url: string}>)[0].source_url : undefined} style={{maxWidth: '300px', display: 'block'}}/>
                         <h2>{el.title.rendered}</h2>
