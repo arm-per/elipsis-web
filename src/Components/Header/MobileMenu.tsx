@@ -37,7 +37,7 @@ export const MobileMenu = (): ReactElement => {
                 displayMenu && 
                 <nav id="mobile-menu-area" className={`${styles.mobileMenu__container} ${disappear && styles.mobileMenu__container_fade}`}>
                     {
-                                locations.map((link, index) => (
+                                locations.map((link) => (
                                     //if link is an empty object, do not render
                                     <>{Object.keys(link).length > 0 && (
                                     <Link 
