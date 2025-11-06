@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 import { AccessibilityContext } from "../../Contexts/Accessibility";
 import { categoryName } from "../../Utils/Categories";
-import { setLocations} from "../../Utils/createLink";
-
 import styles from './Header.module.css';
 
 export const MobileMenu = (): ReactElement => {
